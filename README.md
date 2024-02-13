@@ -1,7 +1,7 @@
 <h1 align="center">Desafio - Separador de Endereços</h1>
 
 ## :memo: Descrição
-Recebe uma string do endereço contendo logradouro e número e separar em duas strings, sendo uma para número e outra para o logradouro.
+Recebe uma string do endereço contendo logradouro e número, e separa em duas strings, sendo uma para número e outra para o logradouro.
 
 
 ## :wrench: Tecnologias utilizadas
@@ -28,7 +28,7 @@ Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando 
 
 ![alt text](image.png)
 
-### Rodando a aplicação com o executável:
+### Utilizando a aplicação com o executável:
 
 * Abrir o arquivo: SeparadorDeEnderecos\DesafioEndereco\publish\DesafioEndereco.Console.exe
 
@@ -40,11 +40,11 @@ Observação: Para rodar os testes é necessário instalar o SDK do .NET 6
 
 * SDK .NET 6 - [Link Oficial Microsoft](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
-#### Rodando pelo Visual Studio
+#### Executando pelo Visual Studio
 
 ![Testes xUnit](<Testes - Separador de Endereços.gif>)
 
-#### Rodando pelo terminal:
+#### Executando pelo terminal:
   ```
   cd SeparadorDeEnderecos/DesafioEndereco/DesafioEndereco.Tests/
   ```
