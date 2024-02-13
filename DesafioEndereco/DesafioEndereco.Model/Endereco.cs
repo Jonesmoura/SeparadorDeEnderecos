@@ -29,5 +29,10 @@ namespace DesafioEndereco.Model
 
         }
 
+        public override string ToString()
+        {
+            return $"Logradouro: {Logradouro}, Número: {Numero}";
+        }
+
     }
 }

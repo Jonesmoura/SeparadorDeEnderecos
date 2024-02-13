@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DesafioEndereco.Model\DesafioEndereco.Model.csproj" />
+  </ItemGroup>
+
 </Project>
