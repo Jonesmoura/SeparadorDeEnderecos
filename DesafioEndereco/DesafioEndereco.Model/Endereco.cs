@@ -1,21 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System.Text.RegularExpressions;
 
 namespace DesafioEndereco.Model
 {
     public class Endereco
     {
-        public string? Logradouro { get; private set; }
-        public string? Numero { get; private set; }
+        public string Logradouro { get; private set; } = String.Empty;
+        public string Numero { get; private set; } = String.Empty;
 
         public Endereco(string endereco) 
         {
-            string[] arrEndereco = endereco.Split(' ');
-            Logradouro = arrEndereco[0];
-            Numero = arrEndereco[1];
+
+            if (Char.IsNumber(endereco[0]))
+            {
+                Regex RE = new Regex(@"\d+");
+                Match theMatch = RE.Match(endereco);
+                Numero = theMatch.ToString();
+                Logradouro = endereco.Substring(Numero.Length).Replace(",", "").Trim();
+
+            }
+            else
+            {
+                Regex RE = new Regex(@"((?i)No \d+.[a-z| ]*$)|((?i)Nº \d+[a-z| ]*$)|(\d+(?i)[a-z| ]*$)", RegexOptions.RightToLeft);
+                Match theMatch = RE.Match(endereco);
+                Numero = theMatch.ToString();
+                Logradouro = endereco.Substring(0, endereco.LastIndexOf(theMatch.ToString())).Replace(",", "").Trim();
+            }
 
         }
 

@@ -362,5 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-# file to configure database connection
-/Queme.Db/Db.cs
+/v17
